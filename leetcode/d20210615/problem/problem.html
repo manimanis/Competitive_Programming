@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matchsticks to Square</title>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Matchsticks to Square</h1>
+
+        <p>You are given an integer array matchsticks where matchsticks[i] is the length of the ith matchstick. You want
+            to use all the matchsticks to make one square. You should not break any stick, but you can link them up, and
+            each matchstick must be used exactly one time.</p>
+        <p>Return true if you can make this square and false otherwise.</p>
+
+
+        <h4>Example 1:</h4>
+        <pre><code>Input: matchsticks = [1,1,2,2,2]
+Output: true
+Explanation: You can form a square with length 2, one side of the square came two sticks with length 1.</code></pre>
+        <h4>Example 2:</h4>
+        <pre><code>Input: matchsticks = [3,3,3,3,4]
+Output: false
+Explanation: You cannot find a way to form a square with all the matchsticks.</code></pre>
+
+        <h4>Constraints:</h4>
+        <ul>
+            <li>1 &lt;= matchsticks.length &lt;= 15</li>
+            <li>0 &lt;= matchsticks[i] &lt;= 109</li>
+        </ul>
+
+        <h5>Hint #1</h5>
+        <p>Treat the matchsticks as an array. Can we split the array into 4 equal halves?</p>
+
+        <h5>Hint #2</h5>
+        <p>Every matchstick can belong to either of the 4 sides. We don't know which one. Maybe try out all options!</p>
+
+        <h5>Hint #3</h5>
+        <p>For every matchstick, we have to try out each of the 4 options i.e. which side it can belong to. We can make
+            use of recursion for this.</p>
+
+        <h5>Hint #4</h5>
+        <p>We don't really need to keep track of which matchsticks belong to a particular side during recursion. We just
+            need to keep track of the length of each of the 4 sides.</p>
+
+        <h5>Hint #5</h5>
+        <p>When all matchsticks have been used we simply need to see the length of all 4 sides. If they're equal, we
+            have a square on our hands!</p>
+    </main>
+</body>
+
+</html>

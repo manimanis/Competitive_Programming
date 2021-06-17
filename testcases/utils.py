@@ -24,7 +24,7 @@ def extract_testcases(pythonfile):
     return test_cases
 
 
-def execute_tests(testcases, class_to_test, func, prepare_inp=None, prepare_res=None):
+def execute_tests(testcases, class_to_test, func, prepare_inp=None, prepare_res=None, prepare_out=None):
     sol = class_to_test()
     fun = getattr(sol, func)
     tc, ftn = 0, 0
@@ -32,6 +32,8 @@ def execute_tests(testcases, class_to_test, func, prepare_inp=None, prepare_res=
         tc += 1
         if prepare_inp is not None:
             inp = prepare_inp(*inp)
+        if prepare_out is not None:
+            out = prepare_out(out)
         print(inp)
         res = fun(*inp)
         if prepare_res is not None:
