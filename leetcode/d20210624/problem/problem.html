@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Out of Boundary Paths</title>
+</head>
+
+<body>
+    <main class="container">
+        <h1>Out of Boundary Paths</h1>
+
+        <p>There is an m x n grid with a ball. The ball is initially at the position [startRow, startColumn]. You are
+            allowed to move the ball to one of the four adjacent cells in the grid (possibly out of the grid crossing
+            the grid boundary). You can apply at most maxMove moves to the ball.</p>
+
+        <p>Given the five integers m, n, maxMove, startRow, startColumn, return the number of paths to move the ball out
+            of the grid boundary. Since the answer can be very large, return it modulo 109 + 7.</p>
+
+
+        <h4>Example 1:</h4>
+
+        <img src="images/out_of_boundary_paths_1.png" alt="Example 1">
+
+        <pre><code>Input: m = 2, n = 2, maxMove = 2, startRow = 0, startColumn = 0
+Output: 6</code></pre>
+
+        <h4>Example 2:</h4>
+
+        <img src="images/out_of_boundary_paths_2.png" alt="Example 2">
+
+        <pre><code>Input: m = 1, n = 3, maxMove = 3, startRow = 0, startColumn = 1
+Output: 12</code></pre>
+
+        <h4>Constraints:</h4>
+
+        <ul>
+            <li>1 &lt;= m, n &lt;= 50</li>
+            <li>0 &lt;= maxMove &lt;= 50</li>
+            <li>0 &lt;= startRow &lt; m</li>
+            <li>0 &lt;= startColumn &lt; n</li>
+        </ul>
+
+        <h4>Hint #1</h4>
+
+        <p>Is traversing every path feasible? There are many possible paths for a small matrix. Try to optimize it.</p>
+
+        <h4>Hint #2</h4>
+
+        <p>Can we use some space to store the number of paths and update them after every move?</p>
+
+        <h4>Hint #3</h4>
+
+        <p>One obvious thing: the ball will go out of the boundary only by crossing it. Also, there is only one possible
+            way the ball can go out of the boundary from the boundary cell except for corner cells. From the corner
+            cell, the ball can go out in two different ways. Can you use this thing to solve the problem?</p>
+
+    </main>
+</body>
+
+</html>
