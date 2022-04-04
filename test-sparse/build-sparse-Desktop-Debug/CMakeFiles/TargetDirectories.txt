@@ -1,0 +1,3 @@
+/mnt/CE3C92843C9266ED/Competitive/test-sparse/build-sparse-Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/mnt/CE3C92843C9266ED/Competitive/test-sparse/build-sparse-Desktop-Debug/CMakeFiles/edit_cache.dir
+/mnt/CE3C92843C9266ED/Competitive/test-sparse/build-sparse-Desktop-Debug/CMakeFiles/sparse.dir
